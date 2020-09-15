@@ -1,4 +1,40 @@
 .section-features {
     height: 100vh;
-    background-color: #eee;
+    background-color: #fdfbea;
+    color: #746f72;
+    padding: 12rem;
+    word-spacing: 2px;
+    position: relative;
+}
+
+.features {
+    max-width: 90%;
+    margin: 10rem auto;
+    display: flex;
+    justify-content: space-between;
+    word-wrap: wrap;
+    
+
+    &__box {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 30%;
+        padding: 7rem 3rem;
+        border-radius: 1rem;
+        background-color: #ffe0a3;
+    }
+
+    &__icon {
+        width: 7rem;
+        height: auto;
+        margin-bottom: 3rem;
+    }
+
+    &__text {
+        font-size: 2.5rem;
+    }
 }

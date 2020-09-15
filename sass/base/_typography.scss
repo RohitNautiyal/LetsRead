@@ -1,3 +1,15 @@
 h1 {
-    color: red;
+    font-family: 'Roboto Slab', serif;
+    margin: 0;
+    margin-bottom: 3rem;
+    font-size: 5rem;
+    // font-weight: bolder;
+    // color: $color-off-white;
+    // color: #403d39;
+    background: linear-gradient(to bottom, #fcbf49, #f77f00);
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+    word-spacing: 5px;
+
 }
