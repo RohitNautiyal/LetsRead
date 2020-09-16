@@ -15,6 +15,16 @@ body {
     position: relative;
 }
 
+:root::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+:root {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 

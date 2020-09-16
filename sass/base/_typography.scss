@@ -7,6 +7,7 @@ h1 {
     // color: $color-off-white;
     // color: #403d39;
     background: linear-gradient(to bottom, #fcbf49, #f77f00);
+    -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     text-align: center;

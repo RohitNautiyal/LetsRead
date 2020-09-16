@@ -1,32 +1,58 @@
 window.addEventListener("keydown", (e) => {
-    let scrollLength = window.innerHeight;
     if (e.key === "ArrowDown" || e.key === "ArrowUp") {
         e.preventDefault();
-        scrollLength = e.key === "ArrowDown" ? window.innerHeight : -window.innerHeight;
-        window.scrollBy({
-            top: scrollLength,
-            behavior: "smooth"
-        });
-        // setTimeout(() => {
-        //     let position = window.screenY;
-        //     while(position < window.innerHeight) position -= window.innerHeight;
-        //     window.scrollBy({
-        //         top: scrollLength,
-        //         behavior: "smooth"
-        //     });
-        // }, 1000);
+        throttleFunction(scrollWindow, e, 200);
     }
 });
-// window.onwheel = (e) => {
-//     e.preventDefault();
-//     scrollLength = e.deltaY > 0 ? window.innerHeight : -window.innerHeight;
+
+var  throttleFunction  =  function (func, param, delay) {
+	if (timerId) {
+		return
+	}
+    var timerId  =  setTimeout(function () {
+		func(param)
+		timerId  =  undefined;
+	}, delay)
+}
+
+function scrollWindow(e) {
+    let scrollLength = window.innerHeight;
+    scrollLength = e.key === "ArrowDown" ? window.innerHeight : -window.innerHeight;
+    window.scrollBy({
+        top: scrollLength,
+        behavior: "smooth"
+    });
+}
+// function scrollWindow1(e) {
+//     let scrollLength = window.innerHeight;
 //     window.scrollBy({
 //         top: scrollLength,
 //         behavior: "smooth"
 //     });
 // }
 
+// window.addEventListener("scroll", (e) => {
+//     e.preventDefault();
+//     throttleFunction(scrollWindow1, e, 200);
+// })
 
+
+
+// window.onwheel = (e) => {
+//     e.preventDefault();
+//     throttleFunction(onWheelScroll, e, 200)
+// }
+
+// function onWheelScroll(e) {
+//     console.log(e);
+//     if(Math.floor(window.pageYOffset)%window.innerHeight) {
+//         scrollLength = e.deltaY > 0 ? window.innerHeight : -window.innerHeight;
+//         window.scrollBy({
+//             top: scrollLength,
+//             behavior: "smooth"
+//         });
+//     }
+// }
 
 
 // ==================================
