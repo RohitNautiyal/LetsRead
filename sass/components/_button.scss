@@ -1,0 +1,24 @@
+.btn:link,
+.btn:visited,
+.btn:active,
+.btn:hover {
+    font-size: 2.2rem;
+    padding: 2rem 5rem;
+    border-radius: 5rem;
+    line-height: 1;
+    // transition: all .2s;
+    transform: translateY(0);
+}
+
+.btn--primary:link,
+.btn--primary:visited,
+.btn--primary:hover {
+    color: $color-off-white;
+    background-color: $color-primary-dark;
+    font-weight: 400;
+    animation: btn-up-down 3s infinite;
+    // margin-bottom: 15rem;
+}
+.btn--primary:active {
+    animation: none;
+}

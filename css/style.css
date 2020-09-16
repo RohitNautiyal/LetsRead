@@ -29,7 +29,7 @@ body {
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 html {
-  line-height: 1.15;
+  line-height: 1.3;
   /* 1 */
   -webkit-text-size-adjust: 100%;
   /* 2 */ }
@@ -86,7 +86,9 @@ pre {
    * Remove the gray background on active links in IE 10.
    */
 a {
-  background-color: transparent; }
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit; }
 
 /**
    * 1. Remove the bottom border in Chrome 57-
@@ -327,16 +329,52 @@ template {
   display: none; }
 
 h1 {
-  font-family: 'Roboto Slab', serif;
   margin: 0;
-  margin-bottom: 3rem;
+  padding: 0;
+  font-family: 'Roboto Slab', serif; }
+
+.heading-primary, .heading-secondary {
   font-size: 5rem;
+  text-align: center;
+  word-spacing: 5px; }
+
+.heading-primary {
+  margin-bottom: 3rem;
   background: linear-gradient(to bottom, #fcbf49, #f77f00);
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;
-  text-align: center;
-  word-spacing: 5px; }
+  color: transparent; }
+
+.heading-secondary {
+  margin-bottom: 6rem;
+  color: #e9ecef; }
+
+@keyframes btn-up-down {
+  0% {
+    transform: translateY(0);
+    box-shadow: none; }
+  30% {
+    transform: translateY(0);
+    box-shadow: none; }
+  40% {
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-0.5rem); }
+  50% {
+    transform: translateY(0);
+    box-shadow: none; }
+  60% {
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-0.5rem); }
+  70% {
+    transform: translateY(0);
+    box-shadow: none; }
+  100% {
+    transform: translateY(0);
+    box-shadow: none; } }
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto; }
 
 .nav {
   box-sizing: border-box;
@@ -362,7 +400,6 @@ h1 {
     .nav__links li:not(:last-child) {
       margin-right: 3rem; }
   .nav__link {
-    text-decoration: none;
     color: #e9ecef;
     padding: 0 1rem 1.5rem;
     border-bottom: 3px solid transparent;
@@ -383,10 +420,32 @@ h1 {
       content: "\201C";
       position: absolute;
       top: -7rem;
-      left: -2rem;
+      left: -3rem;
       font-size: 20rem; }
   .quote__author {
-    font-size: 2.5rem; }
+    font-size: 2.5rem;
+    font-weight: 300; }
+
+.btn:link,
+.btn:visited,
+.btn:active,
+.btn:hover {
+  font-size: 2.2rem;
+  padding: 2rem 5rem;
+  border-radius: 5rem;
+  line-height: 1;
+  transform: translateY(0); }
+
+.btn--primary:link,
+.btn--primary:visited,
+.btn--primary:hover {
+  color: #e9ecef;
+  background-color: #f77f00;
+  font-weight: 400;
+  animation: btn-up-down 3s infinite; }
+
+.btn--primary:active {
+  animation: none; }
 
 .header {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url("../../img/header_background_compressed.jpg");
@@ -410,7 +469,6 @@ h1 {
   position: relative; }
 
 .features {
-  max-width: 90%;
   margin: 10rem auto;
   display: flex;
   justify-content: space-between;
@@ -431,13 +489,22 @@ h1 {
     height: auto;
     margin-bottom: 3rem; }
   .features__text {
-    font-size: 2.5rem; }
+    font-size: 2.5rem;
+    font-weight: 300; }
 
 .section-sign-up {
-  background-color: black;
-  height: 100vh; }
+  background-color: #006494;
+  height: 100vh;
+  padding: 12rem 0; }
 
-.next {
-  font-size: 2rem;
-  position: relative;
-  z-index: 10; }
+.sign-up-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%; }
+  .sign-up-container span {
+    display: inline-block;
+    background-color: #fcbf49;
+    color: #494949;
+    line-height: 1.2; }

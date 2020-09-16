@@ -1,14 +1,13 @@
 .section-features {
     height: 100vh;
     background-color: #fdfbea;
-    color: #746f72;
+    color: $color-grey-light;
     padding: 10rem;
     word-spacing: 2px;
     position: relative;
 }
 
 .features {
-    max-width: 90%;
     margin: 10rem auto;
     display: flex;
     justify-content: space-between;
@@ -36,5 +35,6 @@
 
     &__text {
         font-size: 2.5rem;
+        font-weight: 300;
     }
 }

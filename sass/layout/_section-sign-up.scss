@@ -1,10 +1,21 @@
 .section-sign-up {
-    background-color: black;
+    background-color: #006494;
     height: 100vh;
+    padding: 12rem 0;
 }
 
-.next {
-    font-size: 2rem;
-    position: relative;
-    z-index: 10;
+.sign-up-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    span {
+        display: inline-block;
+        background-color: $color-primary-light;
+        color: $color-grey-dark;
+        line-height: 1.2;
+    }
 }
+

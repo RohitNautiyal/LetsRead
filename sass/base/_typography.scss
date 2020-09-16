@@ -1,16 +1,30 @@
 h1 {
-    font-family: 'Roboto Slab', serif;
     margin: 0;
-    margin-bottom: 3rem;
+    padding: 0;
+    font-family: 'Roboto Slab', serif;
+}
+
+%heading {
     font-size: 5rem;
+    text-align: center;
+    word-spacing: 5px;
+}
+
+.heading-primary {
+    @extend %heading;
+    margin-bottom: 3rem;
     // font-weight: bolder;
     // color: $color-off-white;
     // color: #403d39;
-    background: linear-gradient(to bottom, #fcbf49, #f77f00);
+    background: linear-gradient(to bottom, $color-primary-light, $color-primary-dark);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    text-align: center;
-    word-spacing: 5px;
 
+}
+
+.heading-secondary {
+    @extend %heading;
+    margin-bottom: 6rem;
+    color: $color-off-white;
 }

@@ -1,0 +1,36 @@
+@keyframes btn-up-down {
+    0% {
+        transform: translateY(0);
+        box-shadow: none;
+    }
+
+    30% {
+        transform: translateY(0);
+        box-shadow: none;
+    }
+    40% {
+        box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+        transform: translateY(-.5rem);
+    }
+
+    50% {
+        transform: translateY(0);
+        box-shadow: none;
+    }
+
+    60% {
+        box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+        transform: translateY(-.5rem);
+    }
+
+    70% {
+        transform: translateY(0);
+        box-shadow: none;
+    }
+
+    100% {
+        transform: translateY(0);
+        box-shadow: none;
+    }
+
+}
