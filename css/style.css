@@ -11,6 +11,12 @@ body {
   box-sizing: border-box;
   position: relative; }
 
+a:link,
+a:visited,
+a:hover,
+a:active {
+  outline: none; }
+
 :root::-webkit-scrollbar {
   display: none; }
 
@@ -20,6 +26,15 @@ body {
   /* IE and Edge */
   scrollbar-width: none;
   /* Firefox */ }
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: #494949;
+  background: #fcbf49; }
+
+::selection {
+  color: #494949;
+  background: #fcbf49; }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -330,22 +345,22 @@ template {
 
 h1 {
   margin: 0;
-  padding: 0;
-  font-family: 'Roboto Slab', serif; }
+  padding: 0; }
 
-.heading-primary, .heading-secondary {
+.heading-primary--gradient, .heading-primary--solid {
+  font-family: 'Roboto Slab', serif;
   font-size: 5rem;
   text-align: center;
   word-spacing: 5px; }
 
-.heading-primary {
+.heading-primary--gradient {
   margin-bottom: 3rem;
   background: linear-gradient(to bottom, #fcbf49, #f77f00);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent; }
 
-.heading-secondary {
+.heading-primary--solid {
   margin-bottom: 6rem;
   color: #e9ecef; }
 
@@ -438,7 +453,8 @@ h1 {
 
 .btn--primary:link,
 .btn--primary:visited,
-.btn--primary:hover {
+.btn--primary:hover,
+.btn--primary:active {
   color: #e9ecef;
   background-color: #f77f00;
   font-weight: 400;
@@ -511,4 +527,56 @@ h1 {
 
 .section-footer {
   height: 100vh;
-  background-color: #343a40; }
+  background: repeating-linear-gradient(to right, #495057, #495057 5px, #343a40 5px, #343a40 10px);
+  padding-top: 10rem;
+  display: flex;
+  flex-direction: column; }
+
+.about-me {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0;
+  background-color: rgba(255, 255, 255, 0.4); }
+  .about-me__image {
+    max-width: 15rem;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 5rem; }
+  .about-me__description {
+    max-width: 50%;
+    font-size: 2rem;
+    color: #212529; }
+  .about-me__text {
+    word-spacing: 2px;
+    margin-bottom: 1rem; }
+  .about-me__icon {
+    display: inline-block;
+    width: 3rem;
+    vertical-align: bottom;
+    margin-left: 1rem; }
+
+.footer {
+  background-color: rgba(0, 0, 0, 0.4);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5rem; }
+  .footer__links {
+    list-style: none;
+    font-size: 2.2rem;
+    color: #e9ecef;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0; }
+    .footer__links li:not(:last-child) {
+      margin-right: 5rem; }
+
+.copyright {
+  font-size: 1.6rem;
+  font-weight: 300;
+  text-align: center;
+  color: #e9ecef;
+  word-spacing: 2px; }

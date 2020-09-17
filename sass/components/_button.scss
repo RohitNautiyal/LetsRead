@@ -12,7 +12,8 @@
 
 .btn--primary:link,
 .btn--primary:visited,
-.btn--primary:hover {
+.btn--primary:hover,
+.btn--primary:active {
     color: $color-off-white;
     background-color: $color-primary-dark;
     font-weight: 400;

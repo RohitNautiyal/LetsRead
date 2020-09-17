@@ -9,8 +9,8 @@ var  throttleFunction  =  function (func, param, delay) {
 	if (timerId) {
 		return
 	}
-    func(param);
     var timerId  =  setTimeout(function () {
+        func(param);
 		timerId  =  undefined;
 	}, delay)
 }

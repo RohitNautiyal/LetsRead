@@ -1,21 +1,18 @@
 h1 {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto Slab', serif;
 }
 
 %heading {
+    font-family: 'Roboto Slab', serif;
     font-size: 5rem;
     text-align: center;
     word-spacing: 5px;
 }
 
-.heading-primary {
+.heading-primary--gradient {
     @extend %heading;
     margin-bottom: 3rem;
-    // font-weight: bolder;
-    // color: $color-off-white;
-    // color: #403d39;
     background: linear-gradient(to bottom, $color-primary-light, $color-primary-dark);
     -webkit-background-clip: text;
     background-clip: text;
@@ -23,7 +20,7 @@ h1 {
 
 }
 
-.heading-secondary {
+.heading-primary--solid {
     @extend %heading;
     margin-bottom: 6rem;
     color: $color-off-white;
