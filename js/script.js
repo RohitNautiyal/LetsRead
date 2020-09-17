@@ -1,7 +1,7 @@
 window.addEventListener("keydown", (e) => {
     if (e.key === "ArrowDown" || e.key === "ArrowUp") {
         e.preventDefault();
-        throttleFunction(scrollWindow, e, 200);
+        throttleFunction(scrollWindow, e, 100);
     }
 });
 
@@ -9,8 +9,8 @@ var  throttleFunction  =  function (func, param, delay) {
 	if (timerId) {
 		return
 	}
+    func(param);
     var timerId  =  setTimeout(function () {
-		func(param)
 		timerId  =  undefined;
 	}, delay)
 }
