@@ -1,5 +1,19 @@
 let contact = document.getElementById("contact");
 let formClose = document.getElementById("form-close");
+let nav1 = document.getElementById("nav");
+let navHeight = parseInt(getComputedStyle(nav1).height.split(".")[0]) - 20;
+let nav2 = document.getElementById("nav-2");
+
+
+function navAnimation() {
+    if(window.scrollY > navHeight) {
+        nav1.style.display = "none";
+        nav2.classList.add("fixed");
+    } else {
+        nav1.style.display = "flex";
+        nav2.classList.remove("fixed");
+    }
+}
 
 function hideContactForm(e) {
     let form = document.getElementById("form");
@@ -10,6 +24,7 @@ function hideContactForm(e) {
     }
 }
 
+window.addEventListener("scroll", navAnimation);
 window.addEventListener("click", hideContactForm);
 
 contact.addEventListener("click", (e) => {
@@ -20,6 +35,12 @@ contact.addEventListener("click", (e) => {
 formClose.addEventListener("click", (e) => {
     document.getElementById("form-container").style.display = "none";
 });
+
+
+// INIT
+(() => {
+    navAnimation();
+})();
 
 
 // window.addEventListener("keydown", (e) => {

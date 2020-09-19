@@ -1,11 +1,12 @@
-.nav {
+.nav,
+.nav-2 {
     box-sizing: border-box;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 5;
     width: 100%;
-    padding: 2.5rem 7rem;
+    padding: 2rem 7rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -41,4 +42,23 @@
         }
 
     }
+}
+
+.nav-2 {
+    color: $color-grey-darker;
+    background-color: #ffffff;
+    display: none;
+    
+    &__link {
+        color: $color-grey-dark;
+    }
+}
+
+.fixed {
+    padding: 2rem 7rem;
+    display: flex;
+    position: fixed;
+    transition: transform 1s;
+    animation: navAnimation 0.7s linear both;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.4);
 }
