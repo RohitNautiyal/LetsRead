@@ -1,3 +1,27 @@
+let contact = document.getElementById("contact");
+let formClose = document.getElementById("form-close");
+
+function hideContactForm(e) {
+    let form = document.getElementById("form");
+    let formContainer = document.getElementById("form-container");
+    
+    if(e.target == formContainer) {
+        formContainer.style.display = "none";
+    }
+}
+
+window.addEventListener("click", hideContactForm);
+
+contact.addEventListener("click", (e) => {
+    e.preventDefault();
+    document.getElementById("form-container").style.display = "block";
+});
+
+formClose.addEventListener("click", (e) => {
+    document.getElementById("form-container").style.display = "none";
+});
+
+
 // window.addEventListener("keydown", (e) => {
 //     if (e.key === "ArrowDown" || e.key === "ArrowUp") {
 //         e.preventDefault();

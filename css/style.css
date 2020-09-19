@@ -451,17 +451,73 @@ h1 {
   line-height: 1;
   transform: translateY(0); }
 
-.btn--primary:link,
-.btn--primary:visited,
-.btn--primary:hover,
-.btn--primary:active {
+.btn-primary:link,
+.btn-primary:visited,
+.btn-primary:hover,
+.btn-primary:active {
   color: #e9ecef;
   background-color: #f77f00;
   font-weight: 400;
   animation: btn-up-down 3s infinite; }
 
-.btn--primary:active {
+.btn-primary:active {
   animation: none; }
+
+.form-container {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none; }
+
+.form {
+  padding: 5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #e9ecef;
+  color: #494949;
+  width: 40%; }
+  .form__close {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    font-size: 3rem;
+    line-height: 1;
+    cursor: pointer;
+    color: #494949; }
+  .form__field {
+    margin-bottom: 2rem; }
+  .form__label {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 1rem; }
+  .form__input,
+  .form textarea {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+    font-size: 1.8rem;
+    box-shadow: none; }
+  .form__btn, .form__btn:active {
+    padding: 1rem 3rem;
+    font-size: 2rem;
+    border-radius: 2rem;
+    border: none;
+    outline: none;
+    color: #e9ecef;
+    background-color: #f77f00;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    margin-top: 3rem; }
 
 .header {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url("../img/header_background_compressed.jpg");

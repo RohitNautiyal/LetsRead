@@ -27,6 +27,25 @@
         </div>
     </nav>
 
+    <div class="form-container" id="form-container">
+        <form action="#" class="form" id="form">
+            <div class="form__close" id="form-close">&Cross;</div>
+            <div class="form__field">
+                <label class="form__label" for="name">Name</label>
+                <input class="form__input" type="text" name="Name" id="name" required>
+            </div>
+            <div class="form__field">
+                <label class="form__label" for="email">Email</label>
+                <input class="form__input" type="email" name="Email" id="email" required>
+            </div>
+            <div class="form__field">
+                <label class="form__label" for="subject">Subject</label>
+                <textarea name="Subject" id="subject" cols="30" rows="8" required></textarea>
+            </div>
+            <button class="form__btn" type="submit" value="Submit">Submit</button>
+        </form>
+    </div>
+
     <header class="header" id="header">
         <blockquote class="quote">
             <p class="quote__text">
@@ -66,7 +85,7 @@
     <section class="section-sign-up" id="section-sign-up">
         <div class="sign-up-container row">
             <h1 class="heading-primary--solid">Let us be your accountability partner and help you <span>read more.</span></h1>
-            <a class="btn btn--primary" href="#">Sign Up</a>
+            <a class="btn btn-primary" href="#">Sign Up</a>
         </div>
     </section>
 
@@ -88,7 +107,7 @@
         </div>
         <div class="footer">
             <ul class="footer__links">
-                <li><a href="#" class="footer__link">Contact</a></li>
+                <li><a href="#ContactForm" class="footer__link" id="contact">Contact</a></li>
                 <li><a href="https://github.com/RohitNautiyal/letsRead/tree/master" class="footer__link" target="_blank">Contribute</a></li>
             </ul>
             <p class="copyright">

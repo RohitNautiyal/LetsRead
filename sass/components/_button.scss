@@ -10,16 +10,16 @@
     transform: translateY(0);
 }
 
-.btn--primary:link,
-.btn--primary:visited,
-.btn--primary:hover,
-.btn--primary:active {
+.btn-primary:link,
+.btn-primary:visited,
+.btn-primary:hover,
+.btn-primary:active {
     color: $color-off-white;
     background-color: $color-primary-dark;
     font-weight: 400;
     animation: btn-up-down 3s infinite;
     // margin-bottom: 15rem;
 }
-.btn--primary:active {
+.btn-primary:active {
     animation: none;
 }
