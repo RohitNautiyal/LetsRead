@@ -1,28 +1,28 @@
-window.addEventListener("keydown", (e) => {
-    if (e.key === "ArrowDown" || e.key === "ArrowUp") {
-        e.preventDefault();
-        throttleFunction(scrollWindow, e, 100);
-    }
-});
+// window.addEventListener("keydown", (e) => {
+//     if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+//         e.preventDefault();
+//         throttleFunction(scrollWindow, e, 100);
+//     }
+// });
 
-var  throttleFunction  =  function (func, param, delay) {
-	if (timerId) {
-		return
-	}
-    var timerId  =  setTimeout(function () {
-        func(param);
-		timerId  =  undefined;
-	}, delay)
-}
+// var  throttleFunction  =  function (func, param, delay) {
+// 	if (timerId) {
+// 		return
+// 	}
+//     var timerId  =  setTimeout(function () {
+//         func(param);
+// 		timerId  =  undefined;
+// 	}, delay)
+// }
 
-function scrollWindow(e) {
-    let scrollLength = window.innerHeight;
-    scrollLength = e.key === "ArrowDown" ? window.innerHeight : -window.innerHeight;
-    window.scrollBy({
-        top: scrollLength,
-        behavior: "smooth"
-    });
-}
+// function scrollWindow(e) {
+//     let scrollLength = window.innerHeight;
+//     scrollLength = e.key === "ArrowDown" ? window.innerHeight : -window.innerHeight;
+//     window.scrollBy({
+//         top: scrollLength,
+//         behavior: "smooth"
+//     });
+// }
 // function scrollWindow1(e) {
 //     let scrollLength = window.innerHeight;
 //     window.scrollBy({

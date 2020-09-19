@@ -464,7 +464,7 @@ h1 {
   animation: none; }
 
 .header {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url("../img/header_background_compressed.jpg");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url("../img/header_background_compressed.jpg");
   background-position: top;
   background-size: cover;
   position: relative;
@@ -477,7 +477,6 @@ h1 {
     margin: 0 20%; }
 
 .section-features {
-  height: 100vh;
   background-color: #fdfbea;
   color: #746f72;
   padding: 10rem;
@@ -485,10 +484,10 @@ h1 {
   position: relative; }
 
 .features {
-  margin: 10rem auto;
   display: flex;
   justify-content: space-between;
-  word-wrap: wrap; }
+  word-wrap: wrap;
+  margin-top: 10rem; }
   .features__box {
     width: 25%;
     display: flex;
@@ -510,8 +509,7 @@ h1 {
 
 .section-sign-up {
   background-color: #006494;
-  height: 100vh;
-  padding: 12rem 0; }
+  padding: 20rem 0; }
 
 .sign-up-container {
   display: flex;
@@ -526,7 +524,6 @@ h1 {
     line-height: 1.2; }
 
 .section-footer {
-  height: 100vh;
   background: repeating-linear-gradient(to right, #495057, #495057 5px, #343a40 5px, #343a40 10px);
   padding-top: 10rem;
   display: flex;
@@ -558,7 +555,7 @@ h1 {
     margin-left: 1rem; }
 
 .footer {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -570,11 +567,18 @@ h1 {
     color: #e9ecef;
     display: flex;
     justify-content: center;
-    padding: 1rem 0; }
+    padding: 1rem 0;
+    margin-bottom: 5rem; }
     .footer__links li:not(:last-child) {
       margin-right: 5rem; }
+  .footer__link:hover {
+    background: linear-gradient(to bottom, #fcbf49, #f77f00);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; }
 
 .copyright {
+  font-family: sans-serif;
   font-size: 1.6rem;
   font-weight: 300;
   text-align: center;

@@ -1,5 +1,4 @@
 .section-features {
-    height: 100vh;
     background-color: #fdfbea;
     color: $color-grey-light;
     padding: 10rem;
@@ -8,11 +7,10 @@
 }
 
 .features {
-    margin: 10rem auto;
     display: flex;
     justify-content: space-between;
     word-wrap: wrap;
-    
+    margin-top: 10rem;
 
     &__box {
         width: 25%;
